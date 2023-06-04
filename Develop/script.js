@@ -3,15 +3,30 @@ var numbers = 1234567890;
 var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var specialCharacters = "!@#$%^&*()_+";
-var password = "";
+var password = " ";
 
 function generatePassword() {
   var passwordlength = prompt("How many characters you want to be for the password?");
-if (thelength < 8 && thelength > 128) {
-  alert("thepassword length is from 8 to 128 characters");
+  // Changing the let or var order here or after the first if statement will effect which prompts will pop-up first 
+  let includeLowercase = confirm("lower case letters");
+  let includeUpercase = confirm("upper case letters");
+  let includenumbers = confirm("numbers");
+  let includespecial =confirm("special characters");
   
-  console.log(passwordlength);
+if (passwordlength < 8 || passwordlength > 128) {
+  alert("Password must be between 8 and 128 characters");
+  return;
 }
+if (includeLowercase === false && includeUpercase === false && includenumbers === false && includespecial === false) {
+  alert("At least one character type must be selected");
+  return;
+}
+}  
+
+// password += numbers[Math.floor(Math.random() * numbers)];
+// password += lowerCase[Math.floor(Math.random() * lowerCase.length)];
+// password += upperCase[Math.floor(Math.random() * upperCase.length)];
+// password += specialCharacters[Math.floor(Math.random() * specialCharacters.length)];
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
