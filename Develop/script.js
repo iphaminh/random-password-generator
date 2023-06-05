@@ -36,8 +36,24 @@ function getPrompt() {
     if (isNaN(chaLength) || chaLength < 8 || chaLength > 128) {
       alert("Character length must be number and between 8 and 128 digits");
     }
+    if (confirm("Lowercase Letter?")) {
+      emArr = emArr.concat(lowerCase);
+    }
+    if (confirm("Uppercase Letter?")) {
+      emArr = emArr.concat(upperCase);
+    }
+    if (confirm("Numbers?")) {
+      emArr = emArr.concat(numbers);
+    }
+    if (confirm("Special Characters?")) {
+      emArr = emArr.concat(specialCharacters);
+    }
     if (confirm(includeLowercase === false || includeUpercase === false || includenumbers === false || includespecial === false)) {
       alert("At least one character type must be selected");
+
+
+    // if (confirm(includeLowercase === false || includeUpercase === false || includenumbers === false || includespecial === false)) {
+    //   alert("At least one character type must be selected");
       
    }
   }
