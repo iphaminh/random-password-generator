@@ -24,6 +24,19 @@ To use the password generator:
 - CSS
 - JavaScript
 
+## Screenshots
+
+Here are some screenshots of the application:
+
+### Initial Screen
+![Initial Screen](./Develop/images/initial-screen.png)
+
+### Prompt for Password Length
+![Prompt for Password Length](./Develop/images/password-length-prompt.png)
+
+### Generated Password
+![Generated Password](./Develop/images/generated-password.png)
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
