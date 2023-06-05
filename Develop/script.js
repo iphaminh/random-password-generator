@@ -7,31 +7,34 @@ var emArr= [];
 var chaLength = 8;
   
 
-// function generatePassword() {
-//   var password = " ";
-//   password += numbers[Math.floor(Math.random() * numbers)];
-//   password += lowerCase[Math.floor(Math.random() * lowerCase.length)];
-//   password += upperCase[Math.floor(Math.random() * upperCase.length)];
-//   password += specialCharacters[Math.floor(Math.random() * specialCharacters.length)];
+function generatePassword() {
+  var password = " ";
   
-//   for (var i = 8; i < passwordLength; i++) {
-//     if (passCombination.includes(password[i])) {
-//       password += passCombination.floor(Math.random() * passCombination.length)];
-//     } else {
-//       cpassCombination.push(password[i]);
-//     }
-  
-// }
-// }
+  for (var i = 0; i < chaLength; i++) {
+    var randomNum = Math.floor(Math.random() * emArr.length);
+}
+}
+
+// Get references to the #generate element
+var generateBtn = document.querySelector("#generate");
+
+// Write password to the #password input
+function writePassword() {
+  var newPrompt = getPrompt();
+
+  if (newPrompt) {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+}
+  // else {
+  //   alert("Please select at least one character type");
+  // }
+
 
 function getPrompt() {
-  var passwordlength = parseInt(prompt("How many characters you want to be for the password?")); //convert the password string into a number/ integer
-
-
-  let includeLowercase = "lower case letters";   // Changing the let or var order here or after the first if statement will effect which prompts will pop-up first 
-  let includeUpercase = "upper case letters";
-  let includenumbers = "numbers";
-  let includespecial = "special characters";
+  chaLength = parseInt(prompt("How many characters you want to be for the password?"));
 
     if (isNaN(chaLength) || chaLength < 8 || chaLength > 128) {
       alert("Character length must be number and between 8 and 128 digits");
@@ -48,27 +51,9 @@ function getPrompt() {
     if (confirm("Special Characters?")) {
       emArr = emArr.concat(specialCharacters);
     }
-    if (confirm(includeLowercase === false || includeUpercase === false || includenumbers === false || includespecial === false)) {
-      alert("At least one character type must be selected");
-
-
-    // if (confirm(includeLowercase === false || includeUpercase === false || includenumbers === false || includespecial === false)) {
-    //   alert("At least one character type must be selected");
-      
+ 
    }
   }
-
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
