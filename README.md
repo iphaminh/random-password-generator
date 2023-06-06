@@ -29,13 +29,13 @@ To use the password generator:
 Here are some screenshots of the application:
 
 ### Initial Screen
-![Initial Screen](./Develop/images/initial-screen.png)
+![Initial Screen](./images/initial-screen.png)
 
 ### Prompt for Password Length
-![Prompt for Password Length](./Develop/images/password-length-prompt.png)
+![Prompt for Password Length](./images/password-length-prompt.png)
 
 ### Generated Password
-![Generated Password](./Develop/images/generated-password.png)
+![Generated Password](./images/generated-password.png)
 
 ## Contributing
 
